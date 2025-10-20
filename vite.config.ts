@@ -24,6 +24,11 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/spa"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   plugins: [react()], // ✅ Supprimez expressPlugin()
   resolve: {
