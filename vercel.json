@@ -3,9 +3,7 @@
     {
       "source": "/api/(.*)",
       "destination": "https://smc-tech-backend.onrender.com/api/$1"
-    }
-  ],
-  "redirects": [
+    },
     {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
