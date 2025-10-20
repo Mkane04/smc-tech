@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000', // Votre vrai backend
+        target: 'http://localhost:3000',
         changeOrigin: true,
       }
     },
@@ -24,13 +24,8 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/spa"),
     emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
   },
-  plugins: [react()], // ✅ Supprimez expressPlugin()
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),

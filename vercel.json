@@ -5,11 +5,8 @@
       "destination": "https://smc-tech-backend.onrender.com/api/$1"
     },
     {
-      "source": "/((?!api/).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "buildCommand": "npm run build:client",
-  "outputDirectory": "dist/spa",
-  "framework": "vite"
+  ]
 }
