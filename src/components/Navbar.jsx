@@ -15,26 +15,13 @@ const links = [
 export default function Navbar() {
   const { isAuthenticated, user, logout } = useAuth();
   const [open, setOpen] = useState(false);
-  const [dark, setDark] = useState(false);
   const navigate = useNavigate();
 
+  // Force le mode dark au chargement
   useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setDark(isDark);
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
   }, []);
-
-  const toggleDark = () => {
-    const el = document.documentElement;
-    if (el.classList.contains("dark")) {
-      el.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setDark(false);
-    } else {
-      el.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setDark(true);
-    }
-  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border backdrop-blur supports-[backdrop-filter]:bg-background/70">
@@ -60,18 +47,7 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <button
-              aria-label="Basculer le thème"
-              className="btn-outline h-9 w-9 rounded-md grid place-items-center"
-              onClick={toggleDark}
-              title="Mode clair/sombre"
-            >
-              {dark ? (
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21.64 13a9 9 0 11-10.63-10.6 1 1 0 00.89 1.45 7 7 0 109.49 9.49 1 1 0 001.45.89z"/></svg>
-              ) : (
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 100-12 6 6 0 000 12z"/><path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.07 6.07l-1.41-1.41M6.34 6.34L4.93 4.93m12.73 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/></svg>
-              )}
-            </button>
+            {/* Bouton mode nuit supprimé - Mode dark permanent */}
 
             {isAuthenticated ? (
               <div className="flex items-center gap-2">
