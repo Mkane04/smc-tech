@@ -168,7 +168,7 @@ export default function Home() {
                   description: "Bien maîtriser l'Internet des Objets"
                 },
                 {
-                  image: "/images/activities/00.jpg",
+                  image: "/images/activities/00018.jpg",
                   title: "formation en robotique",
                   description: "Apprendre à coder des robots"
                 },
