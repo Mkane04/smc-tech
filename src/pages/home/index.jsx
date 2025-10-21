@@ -163,12 +163,12 @@ export default function Home() {
                   description: "Une journée d'innovation"
                 },
                 {
-                  image: "/images/activities/2.jpg",
+                  image: "/images/activities/mk.jpg",
                   title: "Formation en IoT",
                   description: "Bien maîtriser l'Internet des Objets"
                 },
                 {
-                  image: "/images/activities/2.jpg",
+                  image: "/images/activities/00.jpg",
                   title: "formation en robotique",
                   description: "Apprendre à coder des robots"
                 },
@@ -183,9 +183,9 @@ export default function Home() {
                   description: "Apprendre à coder des robots"
                 },
                 {
-                  image: "/images/activities/2.jpg",
-                  title: "Formation en Arduino",
-                  description: "Apprendre à coder des robots"
+                  image: "/images/activities/00004.jpg",
+                  title: "Space de travail",
+                  description: "Un espace de travail tres confortable"
                 },
                 // Dupliquer pour scroll infini
               
