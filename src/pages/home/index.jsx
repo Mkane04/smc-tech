@@ -43,7 +43,7 @@ export default function Home() {
                 animation: isVisible ? 'fadeInUp 0.6s ease-out 0.1s both' : 'none'
               }}
             >
-              Startup tech • Design futuriste
+              Startup tech •
             </div>
 
             <h1
